@@ -14,9 +14,9 @@ int main(int argumentCount, char *argumentList[]) {
     return 1; /* Exit with error code 1 */
   }
 
-  // PART 1. CREATING VARIABLES:
-  // * Use an ARRAY OBJECT to create an array of Course objects, of size 4.
-  // * Create a string variable to store the filename, load in the value from
+  // PART 1.
+  // *  ARRAY OBJECT to create an array of Course objects, of size 4.
+  // *  a string variable to store the filename, load in the value from
   // argumentList[1].
 struct Course
 {
@@ -28,8 +28,8 @@ array<Course, 4> courses;
 string filename = argumentList[1];
 ifstream input( filename );
 
-  // PART 2. LOADING DATA:
-  // * Create an INPUT FILE STREAM object, try to open the filename passed in.
+  // PART 2. 
+  // *  INPUT FILE STREAM object, try to open the filename passed in.
   // * Read in from the input file in this order:
   // Course 0's name
   // Course 0's grade
@@ -52,8 +52,8 @@ input >> courses[3].name;
 input >> courses[3].grade;
   
 
-  // PART 3: CALCULATE GPA
-  // * Create a float variable to store the AVERAGE. Average all the grades by
+  // PART 3:
+  // *  a float variable to store the AVERAGE. Average all the grades by
   // adding together each grade, then dividing by 4.
 float result = courses[0].grade
    + courses[1].grade + courses[2].grade + 
@@ -63,10 +63,10 @@ float gpa = result / 4;
 
 
   
-  // PART 4: DISPLAY TABLE
-  // * Use cout, left, and setw commands to display each of the COURSE names and
+  // PART 4:
+  // *cout, left, and setw commands to display each of the COURSE names and
   // grades.
-  // * Display the GPA at the end.
+  // * GPA at the end.
 
   cout << left
  << setw( 10 ) << "COURSE"
@@ -97,7 +97,7 @@ float gpa = result / 4;
 /*
 Expected output:
 
-./program2exe spring2022.txt
+./program2exe 
 GRADE REPORT
 COURSE    GRADE
 --------------------
